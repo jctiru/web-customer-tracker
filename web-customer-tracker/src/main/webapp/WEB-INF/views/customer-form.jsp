@@ -30,6 +30,7 @@
 			action="save-customer"
 			modelAttribute="customer"
 			method="POST">
+			<form:hidden path="id" />
 			<table>
 				<tbody>
 					<tr>
