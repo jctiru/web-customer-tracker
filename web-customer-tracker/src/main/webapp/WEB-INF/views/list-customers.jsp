@@ -20,22 +20,29 @@
 		</div>
 	</div>
 	<div id="container">
-		<table>
-			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email Name</th>
-			</tr>
-			<c:forEach
-				var="customer"
-				items="${customers}">
+		<div id="content">
+			<input
+				type="button"
+				value="Add Customer"
+				onclick="window.location.href='add-customer-form'; return false"
+				class="add-button">
+			<table>
 				<tr>
-					<td>${customer.firstName}</td>
-					<td>${customer.lastName}</td>
-					<td>${customer.email}</td>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Name</th>
 				</tr>
-			</c:forEach>
-		</table>
+				<c:forEach
+					var="customer"
+					items="${customers}">
+					<tr>
+						<td>${customer.firstName}</td>
+						<td>${customer.lastName}</td>
+						<td>${customer.email}</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</div>
 	</div>
 </body>
 
